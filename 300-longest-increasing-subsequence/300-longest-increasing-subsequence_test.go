@@ -33,6 +33,13 @@ func Test_lengthOfLIS(t *testing.T) {
 			},
 			want: 1,
 		},
+		{
+			name: "case4",
+			args: args{
+				nums: []int{0, 1, 0, 3, 2, 3},
+			},
+			want: 4,
+		},
 	}
 
 	for _, tt := range tests {
