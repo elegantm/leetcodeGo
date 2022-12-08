@@ -1,4 +1,4 @@
 set -x 
 
 
-go test -v */*.go
+go test -v -race -count=1 ./...
