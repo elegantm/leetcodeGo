@@ -1,8 +1,8 @@
 package leetcode
 
-import "github.com/elegantm/leetcodeGo/structs"
+import "github.com/elegantm/leetcodeGo/structures"
 
-type ListNode = structs.ListNode
+type ListNode = structures.ListNode
 
 func reverseKGroup(head *ListNode, k int) *ListNode {
 	if head == nil || k == 1 {
@@ -30,4 +30,16 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 		end = pre
 	}
 	return dummy.Next
+}
+
+func reverse(head *ListNode) *ListNode {
+	var pre *ListNode
+	cur := head
+	for cur != nil {
+		next := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = next
+	}
+	return pre
 }
