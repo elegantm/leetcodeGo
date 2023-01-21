@@ -1,8 +1,6 @@
 package leetcode
 
-import (
-	"github.com/elegantm/leetcodeGo/structs"
-)
+import "github.com/elegantm/leetcodeGo/structs"
 
 type ListNode = structs.ListNode
 
